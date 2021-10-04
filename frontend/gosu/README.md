@@ -1,4 +1,4 @@
-# playground
+# gosu
 
 ## Project setup
 ```
