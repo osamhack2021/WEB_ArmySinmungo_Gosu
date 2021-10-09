@@ -1,0 +1,178 @@
+<template>
+  <v-app>
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-data-table
+            :headers="headers"
+            :items="opions"
+            :page.sync="page"
+            :items-per-page="itemsPerPage"
+            hide-default-footer
+            class="elevation-1"
+            @page-count="pageCount = $event"
+          />
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col class="text-center pt-2">
+          <v-pagination
+            v-model="page"
+            :length="pageCount"
+          />
+        </v-col>
+      </v-row>
+      <v-row justify="end">
+        <v-col
+          cols="auto"
+        >
+          <v-btn
+            :to="{path:'/postList/create'}"
+          >
+            Write
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
+</template>
+
+<script>
+export default {
+    props:{
+    
+    },
+    data(){
+        return{
+            writeMode:false,
+            itemsPerPage:5,
+            page: 1,
+            pageCount:0,
+            headers:[
+                {
+                    text:"공감",
+                    align:'start',
+                    value:'sympothy'
+
+                },
+                {
+                    text:"분류",
+                    value:'category',
+                },
+                {
+                    text:"제목",
+                    sortable:false,
+                    value:"title"
+                },
+                {
+                    text:"작성일",
+                    sortable:false,
+                    value:'writeDate'
+                },
+                {
+                    text:"조회수",
+                    value:"viewNumber"
+                }
+            ],
+            opions:[
+                {
+                    sympothy:'3',
+                    category:'인사',
+                    title:"안녕하세요",
+                    writeDate:'2021-10-04',
+                    viewNumber:'1'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+                {
+                    sympothy:'1',
+                    category:'인사',
+                    title:"안녕하십니까?",
+                    writeDate:'2021-10-04',
+                    viewNumber:'3'
+                },
+            ]
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>

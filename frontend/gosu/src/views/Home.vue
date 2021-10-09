@@ -1,8 +1,7 @@
 <template>
-    <v-app>
-  <hello-world />
-
-    </v-app>
+  <v-app>
+    <hello-world />
+  </v-app>
 </template>
 
 <script>
