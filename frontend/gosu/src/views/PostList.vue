@@ -163,6 +163,7 @@ export default {
     // boardTitle(){
     //   return this.$route.params.boardTitle
     // }
+
   },
   created(){
     console.log("route",this.$route)
