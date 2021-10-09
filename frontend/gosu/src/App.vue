@@ -76,7 +76,7 @@
 
               v-on="on"
               router :to="{
-                name:'PostList',
+                name: sub.boardId,
                 params:{boardId:sub.boardId}
                 }"
               >

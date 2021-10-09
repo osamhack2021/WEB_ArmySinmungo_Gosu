@@ -6,6 +6,7 @@ import CommunicateBoard from '../views/communicateBoard'
 import PostDetail from '../views/PostDetail'
 import PostCreate from '../views/PostCreate'
 import PostList from '../views/PostList'
+import { codePointAt } from 'core-js/core/string'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+      path:'/free',
+      name: 'freeBoard',
+      component:FreeBoard
     },
     {
         path: '/postList/:boardId',
